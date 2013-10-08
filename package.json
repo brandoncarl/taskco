@@ -1,0 +1,22 @@
+{
+  "name": "TaskCo",
+  "version": "0.0.1",
+  "description": "Redis-backed jobs queue for node.js",
+  "keywords": [
+    "job",
+    "queue",
+    "worker",
+    "redis"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brandon Carl",
+  "dependencies": {
+    "redis": "~0.8.6",
+    "hiredis": "~0.1.15",
+    "lodash-node": "~2.2.1",
+    "async": "~0.2.9"
+  }
+}
