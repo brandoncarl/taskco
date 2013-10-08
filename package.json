@@ -1,7 +1,7 @@
 {
   "name": "TaskCo",
   "version": "0.0.1",
-  "description": "Redis-backed jobs queue for node.js",
+  "description": "Distributed jobs queue for node.js",
   "keywords": [
     "job",
     "queue",
@@ -17,6 +17,7 @@
     "redis": "~0.8.6",
     "hiredis": "~0.1.15",
     "lodash-node": "~2.2.1",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "when": "~2.5.1"
   }
 }
