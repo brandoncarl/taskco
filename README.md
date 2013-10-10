@@ -1,4 +1,4 @@
-taskco
+TaskCo
 ======
 
 Distributed priority jobs queue for node.js
