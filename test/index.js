@@ -9,9 +9,13 @@ var processEmail = {
   },
 
   work: function(task, done) {
-    task.emit('alert', 'Hi there!');
+    // task.emit('alert', 'Hi there!');
     console.log('PROCESSING JOB', task.id);
     setTimeout(done, 500);
+    task.on('complete', function() {
+      console.log("COMPLETED");
+      task.off();
+    })
   },
 
 };
