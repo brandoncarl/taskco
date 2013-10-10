@@ -19,7 +19,7 @@ var processEmail = {
 
 TaskCo.addProcedure('email', processEmail, { removeAfter : 5 });
 
-TaskCo.addTeam('email', 1, function(err, team) { team.start(); });
+TaskCo.addTeam('email', 1);
 
 // TaskCo.quickTask
 
