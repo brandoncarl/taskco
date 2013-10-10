@@ -2,10 +2,19 @@
 var TaskCo = require('../index.js').setup();
 // var worker = require('./worker');
 
-var processEmail = function(task, done) {
-  console.log('PROCESSING JOB', task.id);
-  setTimeout(done, 500);
-}
+var processEmail = {
+
+  alert: function(text) {
+    console.log(text);
+  },
+
+  work: function(task, done) {
+    task.emit('alert', 'Hi there!');
+    console.log('PROCESSING JOB', task.id);
+    setTimeout(done, 500);
+  },
+
+};
 
 
 TaskCo.addProcedure('email', processEmail);
