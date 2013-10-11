@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Bug fixes in Monitor (incorrect findId call, missing proxy)
 * Reordered tasks in Factory to tie to reality better
 * Factory.addProcedure now actually returns procedure
 * Removed unused callback from Factory constructor
