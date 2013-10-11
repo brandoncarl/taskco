@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Renamed Factory.shortcut to Factory.quickEntry
 * Adds devDependencies for testing
 * Set up test directory structure
 
