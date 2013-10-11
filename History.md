@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Switches find to findExists in Factory.lacksTask
 * Fixes reference problem in Monitor.findExists
 * Adds Task.info
 * Fixes uid additional and removal problems in Task
