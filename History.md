@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Fixed task with uid in Tasks.uidFunctions
 * Fixed error handling in Procedure constructor
 * Bug fixes in Monitor (incorrect findId call, missing proxy)
 * Reordered tasks in Factory to tie to reality better
