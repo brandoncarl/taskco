@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Factory.addProcedure now actually returns procedure
 * Removed unused callback from Factory constructor
 * Enabled Company.addFactor to add settings without name
 * Renamed Factory.shortcut to Factory.quickEntry
