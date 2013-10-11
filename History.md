@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Removed unused callback from Factory constructor
 * Enabled Company.addFactor to add settings without name
 * Renamed Factory.shortcut to Factory.quickEntry
 * Adds devDependencies for testing
