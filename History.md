@@ -1,6 +1,8 @@
 
 2013-10-11
 ==================
+* Adds Task.info
+* Fixes uid additional and removal problems in Task
 * Fixed "this" vs "self" reference in Team.heartbeat
 * Fixed task with uid in Tasks.uidFunctions
 * Fixed error handling in Procedure constructor
