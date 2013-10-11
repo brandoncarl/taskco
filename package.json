@@ -19,5 +19,10 @@
     "lodash-node": "~2.2.1",
     "async": "~0.2.9",
     "when": "~2.5.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "chai": "~1.8.1",
+    "chai-as-promised": "~4.0.0"
   }
 }

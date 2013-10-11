@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Adds devDependencies for testing
 * Set up test directory structure
 
 
