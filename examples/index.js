@@ -11,7 +11,8 @@
 //   options  : { no_ready_check : true }
 // };
 
-// var TaskCo = require('../index.js').setup(config, redisURL.auth.split(":")[1]);
+// var redisURL = "redis://rediscloud:...";
+// var TaskCo = require('../index.js').setup(redisURL);
 
 
 // Local
