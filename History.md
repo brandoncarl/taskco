@@ -1,4 +1,11 @@
 
+0.0.3 / 2013-10-12
+==================
+ * Adds string parsing to transport-redis
+ * Procedure has "andTeam" chaining
+ * lacksTask now rejects with id vs error
+
+
 0.0.2 / 2013-10-12
 ==================
  * Provides small redis url example and improves transport-redis arguments
