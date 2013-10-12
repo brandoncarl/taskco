@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* More extensive factory testing
 * Changes uid hash to not store type
 * Changes quickEntry to return task
 * Switches find to findExists in Factory.lacksTask

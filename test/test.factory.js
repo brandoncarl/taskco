@@ -3,7 +3,6 @@
 
 
 var vars = {
-  factories : [],
   tasks : []
 }
 
@@ -17,10 +16,10 @@ describe("Factory Module", function() {
 
     it("creates a factory", function() {
       var name = "custom";
-      vars.factories[0] = new Factory(name);
-      expect(vars.factories[0].name).to.equal(name);
-      expect(vars.factories[0].prefix).to.equal("tc:" + name + ":");
-      expect(vars.factories[0].broker).to.exist;
+      vars.factory = new Factory(name);
+      expect(vars.factory.name).to.equal(name);
+      expect(vars.factory.prefix).to.equal("tc:" + name + ":");
+      expect(vars.factory.broker).to.exist;
     });
 
     // NEEDS TO BE DONE
@@ -40,10 +39,10 @@ describe("Factory Module", function() {
 
   describe("#getNextId", function() {
     it("gets next ID", function(done) {
-      var p = vars.factories[0].getNextId("turnip");
+      var p = vars.factory.getNextId("turnip");
       p.should.eventually.equal(1)
       p.then(function() {
-        p = vars.factories[0].getNextId("turnip");
+        p = vars.factory.getNextId("turnip");
         p.should.eventually.equal(2).and.notify(done);
       });
     });
@@ -59,7 +58,7 @@ describe("Factory Module", function() {
         }
       }
 
-      var output = vars.factories[0].addProcedure("noop", input);
+      var output = vars.factory.addProcedure("noop", input);
       expect(output.name).to.equal("noop");
       expect(output.work).to.deep.equal(input.work);
     });
@@ -71,7 +70,7 @@ describe("Factory Module", function() {
         }
       }
 
-      badFxn = function() { return vars.factories[0].addProcedure("badOp", input); }
+      badFxn = function() { return vars.factory.addProcedure("badOp", input); }
       expect(badFxn).to.throw(Error);
     });
 
@@ -83,9 +82,9 @@ describe("Factory Module", function() {
         }
       }
 
-      badFxn = function() { return vars.factories[0].addProcedure("badOp", input); }
+      badFxn = function() { return vars.factory.addProcedure("badOp", input); }
       expect(badFxn).to.throw(Error);
-      expect(Object.keys(vars.factories[0].procedures)).to.have.length(1)
+      expect(Object.keys(vars.factory.procedures)).to.have.length(1)
     });
   });
 
@@ -93,7 +92,7 @@ describe("Factory Module", function() {
   describe("#createTask", function() {
 
     it("creates a task", function(done) {
-      vars.factories[0].createTask("noop", {}).then(function(task) {
+      vars.factory.createTask("noop", {}).then(function(task) {
         vars.tasks[0] = task;
         task.id.should.be.a('number');
         done()
@@ -102,7 +101,7 @@ describe("Factory Module", function() {
 
 
     it("creates a task with data", function(done) {
-      vars.factories[0].createTask("noop", { home : 'heartIs' }).then(function(task) {
+      vars.factory.createTask("noop", { home : 'heartIs' }).then(function(task) {
         vars.tasks[1] = task;
         task.id.should.be.a('number');
         done()
@@ -111,7 +110,7 @@ describe("Factory Module", function() {
 
 
     it("creates a task with a uid", function(done) {
-      vars.factories[0].createTask("noop", { uid : 'anotherTask' }).then(function(task) {
+      vars.factory.createTask("noop", { uid : 'anotherTask' }).then(function(task) {
         vars.tasks[2] = task;
         task.id.should.be.a('number');
         done()
@@ -128,20 +127,128 @@ describe("Factory Module", function() {
   describe("#saveTask", function() {
 
     it("saves a standard task", function(done) {
-      vars.factories[0].saveTask(vars.tasks[0]).should.be.fulfilled.and.notify(done);
+      vars.factory.saveTask(vars.tasks[0]).should.be.fulfilled.and.notify(done);
     });
 
     it("saves a task with data", function(done) {
-      vars.factories[0].saveTask(vars.tasks[1]).should.be.fulfilled.and.notify(done);
+      vars.factory.saveTask(vars.tasks[1]).should.be.fulfilled.and.notify(done);
     });
 
     it("saves a task with a uid", function(done) {
-      vars.factories[0].saveTask(vars.tasks[2]).should.be.fulfilled.and.notify(done);
+      vars.factory.saveTask(vars.tasks[2]).should.be.fulfilled.and.notify(done);
+    });
+
+    it("doesn't saves a task with same uid", function(done) {
+      vars.factory.saveTask(vars.tasks[2]).should.be.rejected.and.notify(done);
+    });
+  });
+
+
+  describe("#quickEntry", function() {
+
+    it("saves a task", function(done) {
+      vars.factory.quickEntry("noop")
+      .then(function(task) { vars.tasks[3] = task; done() });
+    });
+
+    it("saves a task with data", function(done) {
+      vars.factory.quickEntry("noop", { hi : "there" }).then(function(task) { vars.tasks[4] = task; done() });
+    });
+
+    it("saves a task with uid", function(done) {
+      vars.factory.quickEntry("noop", { uid : "goaway" }).then(function(task) { vars.tasks[5] = task; done() });
+    });
+
+    it("doesn't saves a task with same uid (but doesn't throw error)", function(done) {
+      vars.factory.quickEntry("noop", { uid : "goaway" })
+      .then(function(task) { vars.tasks[6] = task; done() })
+      .otherwise(function(err) { done(); });
+    });
+  });
+
+
+  describe("#getTask", function() {
+    it("retrieves good tasks by id", function(done) {
+
+      vars.factory.getTask(vars.tasks[0].id)
+
+      .then(function(task) {
+        return vars.factory.getTask(vars.tasks[1].id)
+      })
+
+      .then(function(task) {
+        return vars.factory.getTask(vars.tasks[2].id)
+      })
+
+      .then(function(task) {
+        return vars.factory.getTask(vars.tasks[3].id)
+      })
+
+      .then(function(task) {
+        return vars.factory.getTask(vars.tasks[4].id)
+      })
+
+      .then(function(task) {
+        return vars.factory.getTask(vars.tasks[5].id)
+      })
+
+      .then(function(task) {
+        done();
+      });
+
+    });
+
+    it("does not retrieve bad tasks", function(done) {
+      var promise = vars.factory.getTask(vars.tasks[6].id);
+      promise.should.be.rejected.and.notify(done);
+      promise.then(function() {
+        vars.factory.getTask(100).should.be.rejected.and.notify(done);
+      });
+    });
+
+  });
+
+  describe("#getTaskId", function() {
+
+    it("finds a good task by uid", function(done) {
+      vars.factory.getTaskId("noop", "goaway")
+      .should.eventually.equal(vars.tasks[5].id.toString()).and.notify(done);
+    });
+
+    it("returns an error when not found", function(done) {
+      vars.factory.getTaskId("noop", "goaways").should.be.rejected.and.notify(done);
     });
 
 
   });
 
+  describe("#getTaskStatus", function() {
+
+  });
+
+  describe("#reserveTaskId", function() {
+
+  });
+
+
+  describe("#lacksTask", function() {
+
+    it("does not lack a good task by uid", function(done) {
+      vars.factory.lacksTask("noop", "goaway")
+      .should.be.rejected.and.notify(done);
+    });
+
+    it("lacks a missing task", function(done) {
+      vars.factory.lacksTask("noop", "goaways")
+      .should.be.fulfilled.and.notify(done);
+    });
+
+  });
+
+
+  describe("#addTeam", function() {
+
+  });
 
 });
 
