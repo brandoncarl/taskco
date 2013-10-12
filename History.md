@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Removes callback from Factory.reserveTaskId
 * Updates example for new form of quickEntry
 * Ensures that progress maxes out at 100
 * More extensive factory testing
