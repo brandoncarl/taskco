@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Changes quickEntry to return task
 * Switches find to findExists in Factory.lacksTask
 * Fixes reference problem in Monitor.findExists
 * Adds Task.info
