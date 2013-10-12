@@ -1,21 +1,43 @@
 
-var TaskCo = require('../index.js').setup();
-// var worker = require('./worker');
+// Using URL
+// var config,
+//     url = require('url'),
+//     redisURL = "redis://rediscloud:...";
+//     redisURL = url.parse(redisURL);
+
+// config = {
+//   hostname : redisURL.hostname,
+//   port     : redisURL.port,
+//   options  : { no_ready_check : true }
+// };
+
+// var TaskCo = require('../index.js').setup(config, redisURL.auth.split(":")[1]);
+
+
+// Local
+var TaskCo = require('../index.js').setup()
+
+
+// client = redis.createClient redisURL.port, redisURL.hostname, {no_ready_check: true}
+// client.auth redisURL.auth.split(":")[1]
+
 
 var processEmail = {
 
+  // Sample custom event
   alert: function(text) {
     console.log(text);
   },
 
+
   work: function(task, done) {
-    // task.emit('alert', 'Hi there!');
-    console.log('PROCESSING JOB', task.id);
-    setTimeout(done, 500);
+    task.emit('alert', 'Hi there!');
+
     task.on('complete', function() {
-      console.log("COMPLETED");
       task.off();
-    })
+    });
+
+    setTimeout(done, 500);
   },
 
 };
@@ -25,31 +47,6 @@ TaskCo.addProcedure('email', processEmail, { removeAfter : 5 });
 
 TaskCo.addTeam('email', 1);
 
-// TaskCo.quickTask
-
-var id;
-
-// setTimeout(function() {
-
-//   TaskCo.createTask('email', {}).then(function(task) {
-
-//     // Store task id
-//     id = task.id;
-
-//     // Attach listeners
-//     task.on('complete', function() {
-//       console.log("completed");
-//       // Free memory
-//       task = null;
-//     });
-
-//     // Save
-//     task.save();
-//   });
-
-// }, 500)
-
-
 setTimeout(function() {
 
   for (var i = 0; i < 10; ++i) {
@@ -58,14 +55,4 @@ setTimeout(function() {
     });
   }
 
-}, 500)
-
-
-
-setTimeout(function() {
-
-  TaskCo.quickEntry('email', {}).then(function(id) {
-
-  });
-
-}, 5000);
+}, 500);
