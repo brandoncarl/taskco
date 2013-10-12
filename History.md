@@ -1,6 +1,7 @@
 
 2013-10-11
 ==================
+* Ensures that progress maxes out at 100
 * More extensive factory testing
 * Changes uid hash to not store type
 * Changes quickEntry to return task
