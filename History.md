@@ -1,4 +1,11 @@
 
+0.0.4 / 2013-10-12
+==================
+* Adds error handling to Factory.quickEntry
+* Removes required procedure for task creation
+* Adds auto-serialization to TransportRedis
+
+
 0.0.3 / 2013-10-12
 ==================
  * Adds string parsing to transport-redis
