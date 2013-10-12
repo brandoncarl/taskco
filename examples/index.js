@@ -53,8 +53,8 @@ var id;
 setTimeout(function() {
 
   for (var i = 0; i < 10; ++i) {
-    TaskCo.quickEntry('email', {}).then(function(id) {
-      console.log('TASK CREATED WITH ID', id);
+    TaskCo.quickEntry('email', {}).then(function(task) {
+      console.log('TASK CREATED WITH ID', task.id);
     });
   }
 
