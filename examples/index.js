@@ -35,6 +35,7 @@ var processEmail = {
     task.emit('alert', 'Hi there!');
 
     task.on('complete', function() {
+      console.log('Completed task!')
       task.off();
     });
 
@@ -44,7 +45,7 @@ var processEmail = {
 };
 
 
-TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(1);
+TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
 
 // TaskCo.addTeam('email', 1);
 
