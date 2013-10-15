@@ -12,9 +12,9 @@ This project started in search of a redis-backed jobs queue. While there are num
 each of these has its benefits/shortcomings. These are in NO way knocks against the projects, or against the authors, they
 simply highlight why we are in need of another solution.
 
-1. Kue (LearnBoost): the most mature, and certainly most beautiful queue around. Fast, and clean code base. However, the
-repo has numerous pull pull requests outstanding, does not offer connection pooling, tends to have problems cleaning up
-tasks, and operates a first-come-first-serve queue.
+1. Kue (LearnBoost): the most mature, and certainly most beautiful queue around. Fast, and clean code base. Large portions
+of this repository were inspired by Kue. Unfortunately, the repo has numerous pull pull requests outstanding, does not
+offer connection pooling, tends to have problems cleaning up tasks, and operates a first-come-first-serve queue.
 
 2. Kue (dfoody): updated with numerous quality-of-service features, it still suffers from lack of connection pooling, and
 has not been shown to be compatible past node 0.6.x. To my knowledge, it also does full text indexing in the manner of
