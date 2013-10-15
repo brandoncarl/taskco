@@ -1,6 +1,7 @@
 
 0.1.1 / 2013-10-16
 ==================
+* Allows for errors in transport-redis.createConnection
 * Adds pubSub to Broker, cleans up legacy code
 
 
