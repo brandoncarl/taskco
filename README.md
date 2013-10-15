@@ -66,7 +66,6 @@ TaskCo.quickEntry('email', { name : 'hello@gmail.com' });
 // **** Process #2 (worker)
 var TaskCo = require('taskco').setup();
 
-
 // A procedure must have a work function
 var processEmail = {
   work: function(task, done) {
@@ -75,7 +74,7 @@ var processEmail = {
   }
 }
 
-// Add the team
+// Add the team with concurrency of 3 workers and remove the job 5 seconds after completion/failure.
 TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
 
 ```
