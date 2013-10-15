@@ -27,7 +27,7 @@ var processEmail = {
 
   // Sample custom event
   alert: function(text) {
-    console.log(text);
+    // console.log(text);
   },
 
 
@@ -35,7 +35,7 @@ var processEmail = {
     task.emit('alert', 'Hi there!');
 
     task.on('complete', function() {
-      console.log('Completed task!')
+      console.log('Completed task!', task.id)
       task.off();
     });
 
@@ -54,6 +54,8 @@ setTimeout(function() {
   for (var i = 0; i < 10; ++i) {
     TaskCo.quickEntry('email', {}).then(function(task) {
       console.log('TASK CREATED WITH ID', task.id);
+    }, function(err) {
+      console.log("PROBLEM!", err)
     });
   }
 
