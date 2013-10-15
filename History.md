@@ -1,4 +1,9 @@
 
+0.1.1 / 2013-10-16
+==================
+* Adds pubSub to Broker, cleans up legacy code
+
+
 0.1.0 / 2013-10-15
 ==================
  * Fixes auth connection string problem with transport-redis
