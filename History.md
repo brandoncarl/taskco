@@ -1,4 +1,21 @@
 
+0.1.0 / 2013-10-15
+==================
+ * Fixes auth connection string problem with transport-redis
+ * Refactors dispatcher and fixes memory leak in getNextJob
+ * Cleans up console.log and whitespace
+ * Switches Manager to Dispatcher (more appropriate name), binds delegate function
+ * Initial refactoring of team/worker
+ * Inserts missing variable in sequence call
+ * Deleted unused functions from task/tasks
+ * Better documentation for task.js
+ * Refactoring of tasks
+ * Utilizes pooled connections
+ * Adds expiration to teams that don't check in
+ * Fixes bug in Task defaults/options
+ * Adds failure messages
+
+
 0.0.5 / 2013-10-12
 ==================
 * Fixes serialization in hashSet

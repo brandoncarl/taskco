@@ -10,7 +10,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Brandon Carl",
   "dependencies": {
@@ -18,7 +18,8 @@
     "hiredis": "~0.1.15",
     "lodash-node": "~2.2.1",
     "async": "~0.2.9",
-    "when": "~2.5.1"
+    "when": "~2.5.1",
+    "generic-pool": "~2.0.4"
   },
   "devDependencies": {
     "mocha": "~1.13.0",

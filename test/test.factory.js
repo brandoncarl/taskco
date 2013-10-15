@@ -199,7 +199,7 @@ describe("Factory Module", function() {
     });
 
     it("does not retrieve bad tasks", function(done) {
-      var promise = vars.factory.getTask(vars.tasks[6].id);
+      var promise = vars.factory.getTask(1000);
       promise.should.be.rejected.and.notify(done);
       promise.then(function() {
         vars.factory.getTask(100).should.be.rejected.and.notify(done);
