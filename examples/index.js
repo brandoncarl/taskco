@@ -19,9 +19,8 @@
 var TaskCo = require('../index.js').setup()
 
 
-// client = redis.createClient redisURL.port, redisURL.hostname, {no_ready_check: true}
-// client.auth redisURL.auth.split(":")[1]
-
+console.time('tasks');
+var i = 0; runs = 10;
 
 var processEmail = {
 
@@ -32,14 +31,15 @@ var processEmail = {
 
 
   work: function(task, done) {
-    task.emit('alert', 'Hi there!');
+    // task.emit('alert', 'Hi there!');
 
     task.on('complete', function() {
       console.log('Completed task!', task.id)
-      task.off();
+      // task.off();
+      if (++i == runs) console.timeEnd('tasks');
     });
 
-    setTimeout(done, 500);
+    setTimeout(done, 50);
   },
 
 };
@@ -51,7 +51,7 @@ TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
 
 setTimeout(function() {
 
-  for (var i = 0; i < 10; ++i) {
+  for (var i = 0; i < runs; ++i) {
     TaskCo.quickEntry('email', {}).then(function(task) {
       console.log('TASK CREATED WITH ID', task.id);
     }, function(err) {
