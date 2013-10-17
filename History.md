@@ -1,4 +1,9 @@
 
+0.1.3 / 2013-10-17
+==================
+* Adds local vs global binding abilities
+
+
 0.1.2 / 2013-10-17
 ==================
 * Renamed complete event to success
