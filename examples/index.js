@@ -33,7 +33,7 @@ var processEmail = {
   work: function(task, done) {
     // task.emit('alert', 'Hi there!');
 
-    task.on('complete', function() {
+    task.on('success', function() {
       console.log('Completed task!', task.id)
       // task.off();
       if (++i == runs) console.timeEnd('tasks');
