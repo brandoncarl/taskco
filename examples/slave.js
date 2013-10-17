@@ -5,6 +5,10 @@ var TaskCo = require('../').setup();
 
 // A procedure must have a work function
 var processEmail = {
+  success: function() {
+    console.log("We did it!")
+  },
+
   work: function(task, done) {
     console.log(task.data.name);
     task.broadcast('alert', "Hi there you!");
