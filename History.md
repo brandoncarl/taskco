@@ -1,6 +1,7 @@
 
 0.1.1 / 2013-10-16
 ==================
+* Changes pubSub language to "sub" (publish clients are separate)
 * Adds basic dispatch functions
 * Allows for errors in transport-redis.createConnection
 * Adds pubSub to Broker, cleans up legacy code
