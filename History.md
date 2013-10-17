@@ -1,4 +1,23 @@
 
+0.1.2 / 2013-10-17
+==================
+* Renamed complete event to success
+* Fixes problem where expiration didn't work across processes
+* Bug fixes in dispatcher
+* Moves worker "complete" and "failure" to single "finished" event
+
+
+0.1.1 / 2013-10-16
+==================
+* Adds task on/broadcast functionality
+* Added publish to transport-redis
+* Added master/slave example
+* Changes pubSub language to "sub" (publish clients are separate)
+* Adds basic dispatch functions
+* Allows for errors in transport-redis.createConnection
+* Adds pubSub to Broker, cleans up legacy code
+
+
 0.1.0 / 2013-10-15
 ==================
  * Fixes auth connection string problem with transport-redis
