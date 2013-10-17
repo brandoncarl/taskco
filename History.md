@@ -1,6 +1,7 @@
 
 0.1.1 / 2013-10-16
 ==================
+* Added publish to transport-redis
 * Added master/slave example
 * Changes pubSub language to "sub" (publish clients are separate)
 * Adds basic dispatch functions
