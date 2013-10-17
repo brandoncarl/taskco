@@ -1,6 +1,7 @@
 
 0.1.2 / 2013-10-17
 ==================
+* Fixes problem where expiration didn't work across processes
 * Bug fixes in dispatcher
 * Moves worker "complete" and "failure" to single "finished" event
 
