@@ -1,4 +1,9 @@
 
+0.1.2 / 2013-10-17
+==================
+* Moves worker "complete" and "failure" to single "finished" event
+
+
 0.1.1 / 2013-10-16
 ==================
 * Added publish to transport-redis
