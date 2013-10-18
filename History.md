@@ -1,6 +1,7 @@
 
 0.1.4 / 2013-10-18
 ==================
+* Renames "localBind" to "bindLocal"
 * Removes progress binding in Worker.work
 * Renames "settings" variables to cxnSettings, and auth" to poolSettings
 
