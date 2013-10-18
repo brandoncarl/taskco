@@ -1,6 +1,7 @@
 
 0.1.4 / 2013-10-18
 ==================
+* Renames "sub" to "subscriber" (and corresponding functions)
 * Renames Dispatcher.digest to routeMessage
 * Renames Dispatcher.dispatch to broadcast
 * Renames Dispatcher{watch, ignore} to watchTask and ignoreTask
