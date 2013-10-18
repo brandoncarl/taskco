@@ -1,6 +1,7 @@
 
 0.1.4 / 2013-10-18
 ==================
+* Procedure.andTeam now returns the team created
 * Renames factory.client to getClient
 * Renames "sub" to "subscriber" (and corresponding functions)
 * Renames Dispatcher.digest to routeMessage
