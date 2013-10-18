@@ -1,6 +1,7 @@
 
 0.2.2 / 2013-10-18
 ==================
+* Adds extensive argument polymorphism: many fxn can accept client + factory
 * Eliminates calls to "run" and Factory.run (was causing binding problems)
 * Binds transport-redis functions to self
 
