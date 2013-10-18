@@ -78,3 +78,11 @@ var processEmail = {
 TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
 
 ```
+
+
+### Priorities
+
+Jobs can have a priority of any number. The higher the number, the higher the priority. Default priority levels include "low", "normal", "medium", "high", and "critical". Please see examples/priority.js for usage.
+
+
+

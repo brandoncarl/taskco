@@ -1,6 +1,7 @@
 
 0.2.1 / 2013-10-18
 ==================
+* Adds "priority" feature and updates Readme
 * Fixed another "subcriber" typo in Dispatcher.constructor
 
 
