@@ -1,6 +1,7 @@
 
 0.1.4 / 2013-10-18
 ==================
+* Renames Dispatcher.dispatch to broadcast
 * Renames Dispatcher{watch, ignore} to watchTask and ignoreTask
 * Removes "done" references from Company
 * Renames "localBind" to "bindLocal"
