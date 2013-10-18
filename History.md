@@ -1,6 +1,7 @@
 
 0.1.4 / 2013-10-18
 ==================
+* Renamed "finish" event to "end"
 * Procedure.andTeam now returns the team created
 * Renames factory.client to getClient
 * Renames "sub" to "subscriber" (and corresponding functions)
