@@ -1,4 +1,9 @@
 
+0.1.4 / 2013-10-18
+==================
+* Renames "settings" variables to cxnSettings, and auth" to poolSettings
+
+
 0.1.3 / 2013-10-17
 ==================
 * Adds local vs global binding abilities
