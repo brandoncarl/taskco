@@ -1,4 +1,9 @@
 
+0.2.1 / 2013-10-18
+==================
+* Fixed another "subcriber" typo in Dispatcher.constructor
+
+
 0.2.0 / 2013-10-18
 ==================
 MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
