@@ -49,7 +49,7 @@ TaskCo was created with the following features in mind:
 
 These are the top priorities currently:
 
-1. Optional logging (to be used for error handling).
+1. Optional logging (to be used for error handling) - this is the first step toward the "monitor".
 2. Better error handling (promises consume a lot of errors...should consider emitting them).
 3. More tests! I'd like to get a great test suite in place to facilitate pull requests.
 4. Separate http server: I prefer to separate this into an additional repo.
