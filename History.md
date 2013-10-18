@@ -1,4 +1,9 @@
 
+0.2.2 / 2013-10-18
+==================
+* Binds transport-redis functions to self
+
+
 0.2.1 / 2013-10-18
 ==================
 * Adds "priority" feature and updates Readme
