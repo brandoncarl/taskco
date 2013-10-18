@@ -1,4 +1,20 @@
 
+0.2.0 / 2013-10-18
+==================
+MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
+* Renamed "finish" event to "end"
+* Procedure.andTeam now returns the team created
+* Renames factory.client to getClient
+* Renames "sub" to "subscriber" (and corresponding functions)
+* Renames Dispatcher.digest to routeMessage
+* Renames Dispatcher.dispatch to broadcast
+* Renames Dispatcher{watch, ignore} to watchTask and ignoreTask
+* Removes "done" references from Company
+* Renames "localBind" to "bindLocal"
+* Removes progress binding in Worker.work
+* Renames "settings" variables to cxnSettings, and auth" to poolSettings
+
+
 0.1.3 / 2013-10-17
 ==================
 * Adds local vs global binding abilities
