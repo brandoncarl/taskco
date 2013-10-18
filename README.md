@@ -45,6 +45,15 @@ TaskCo was created with the following features in mind:
 ![](resources/TaskCo.jpg)
 
 
+## Where you can help:
+
+These are the top priorities currently:
+
+1. Optional logging (to be used for error handling).
+2. Better error handling (promises consume a lot of errors...should consider emitting them).
+3. More tests! I'd like to get a great test suite in place to facilitate pull requests.
+4. Separate http server: I prefer to separate this into an additional repo.
+
 
 ## Getting Started
 
