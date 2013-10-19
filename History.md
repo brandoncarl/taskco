@@ -1,6 +1,7 @@
 
 0.2.2 / 2013-10-18
 ==================
+* Switches sortedAdd/sortedPop order in order to fix LIFO problem
 * Adds race condition example (demonstrates breaking)
 * Cleans up remaining noop and done calls/declarations
 * Adds extensive argument polymorphism: many fxn can accept client + factory
