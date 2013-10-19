@@ -8,27 +8,6 @@ Distributed priority jobs queue for node.js
 
 ## Introduction
 
-### Why another jobs queue for node?
-
-This project started in search of a redis-backed jobs queue. While there are numerous options at the time of publishing,
-each of these has its benefits/shortcomings. These are in NO way knocks against the projects, or against the authors, they
-simply highlight why we are in need of another solution.
-
-1. Kue (LearnBoost): the most mature, and certainly most beautiful queue around. Fast, and clean code base. Large portions
-of this repository were inspired by Kue. Unfortunately, the repo has numerous pull pull requests outstanding, does not
-offer connection pooling, tends to have problems cleaning up tasks, and operates a first-come-first-serve queue.
-
-2. Kue (dfoody): updated with numerous quality-of-service features, it still suffers from lack of connection pooling, and
-has not been shown to be compatible past node 0.6.x. To my knowledge, it also does full text indexing in the manner of
-Kue (LearnBoost).
-
-3. Convoy: Great work by GoSquared to prevent jammed jobs. Currently does not offer storing additional data (a necessity
-for many).
-
-4. Coffee-Resque: a great start in porting Github's own resque, however, the project appears to be not nearly as
-fully-featured.
-
-
 ### TaskCo Goals
 
 TaskCo was created with the following features in mind:
@@ -98,4 +77,25 @@ TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
 Jobs can have a priority of any number. The higher the number, the higher the priority. Default priority levels include "low", "normal", "medium", "high", and "critical". Please see examples/priority.js for usage.
 
 
+## Addendum
+
+### Why another jobs queue for node?
+
+This project started in search of a redis-backed jobs queue. While there are numerous options at the time of publishing,
+each of these has its benefits/shortcomings. These are in NO way knocks against the projects, or against the authors, they
+simply highlight why we are in need of another solution.
+
+1. Kue (LearnBoost): the most mature, and certainly most beautiful queue around. Fast, and clean code base. Large portions
+of this repository were inspired by Kue. Unfortunately, the repo has numerous pull requests outstanding, does not
+offer connection pooling, tends to have problems cleaning up tasks, and operates a first-come-first-serve queue.
+
+2. Kue (dfoody): updated with numerous quality-of-service features, it still suffers from lack of connection pooling, and
+has not been shown to be compatible past node 0.6.x. To my knowledge, it also does full text indexing in the manner of
+Kue (LearnBoost).
+
+3. Convoy: Great work by GoSquared to prevent jammed jobs. Currently does not offer storing additional data (a necessity
+for many).
+
+4. Coffee-Resque: a great start in porting Github's own resque, however, the project appears to be not nearly as
+fully-featured.
 
