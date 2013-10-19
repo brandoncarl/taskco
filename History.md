@@ -1,4 +1,16 @@
 
+0.2.2 / 2013-10-18
+==================
+* Changed Dispatcher#broadcast(id, event) to (event, id)
+* Binds appropriate Dispatcher functions in-module rather than out-of-module
+* Switches sortedAdd/sortedPop order in order to fix LIFO problem
+* Adds race condition example (demonstrates breaking)
+* Cleans up remaining noop and done calls/declarations
+* Adds extensive argument polymorphism: many fxn can accept client + factory
+* Eliminates calls to "run" and Factory.run (was causing binding problems)
+* Binds transport-redis functions to self
+
+
 0.2.1 / 2013-10-18
 ==================
 * Adds "priority" feature and updates Readme
