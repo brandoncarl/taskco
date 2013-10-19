@@ -1,6 +1,7 @@
 
 0.2.2 / 2013-10-18
 ==================
+* Binds appropriate Dispatcher functions in-module rather than out-of-module
 * Switches sortedAdd/sortedPop order in order to fix LIFO problem
 * Adds race condition example (demonstrates breaking)
 * Cleans up remaining noop and done calls/declarations
