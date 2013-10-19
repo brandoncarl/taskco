@@ -4,6 +4,8 @@ TaskCo
 
 Distributed priority jobs queue for node.js
 
+**Note**: this repository is still highly in flux. It is not currently recommended for use in production.
+
 ## Introduction
 
 ### Why another jobs queue for node?
@@ -37,7 +39,8 @@ TaskCo was created with the following features in mind:
 4. Task-routing-friendly: while not currently implemented, the infrastructure was design with this in mind.
 5. Easy input/output. Lots of convenience functions.
 6. As much auto-cleanup as possible (frequent use of `expires`)
-7. An extensive test suite (skeletoned out, but help needed)
+7. The ability to enforce task uniqueness.
+8. An extensive test suite (help needed here)
 
 
 ### Eventual roadmap:
@@ -67,8 +70,9 @@ following example uses those methods.
 // ***** Process #1 (web client)
 var TaskCo = require('taskco').setup();
 
-// Create task
-TaskCo.quickEntry('email', { name : 'hello@gmail.com' });
+// Create task : if uid is set, it will, in conjuction with the type of task (email)
+// enforce uniqueness of that task.
+TaskCo.quickEntry('email', { name : 'hello@gmail.com', uid : 'uniqueid' });
 
 
 
