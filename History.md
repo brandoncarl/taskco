@@ -1,4 +1,9 @@
 
+0.2.5 / 2013-10-21
+==================
+* Hot fix of incorrect client usage in Monitor
+
+
 0.2.4 / 2013-10-21
 ==================
 * Updates retry example and adds remove example
