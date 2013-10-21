@@ -1,6 +1,7 @@
 
 0.2.3 / 2013-10-21
 ==================
+* Wraps Task.finalize function in order to prep for failure retries
 * Bug fix in Dispatcher (ignore instead of ignoreTask)
 * Adds further overloading of Factory.execute
 * Moves task cleanup logic from worker to task
