@@ -1,4 +1,9 @@
 
+0.2.3 / 2013-10-21
+==================
+* Moves team autostart to Factory.addTeam (prevents race conditions)
+
+
 0.2.2 / 2013-10-18
 ==================
 * Changed Dispatcher#broadcast(id, event) to (event, id)
