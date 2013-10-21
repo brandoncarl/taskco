@@ -1,4 +1,9 @@
 
+0.2.4 / 2013-10-21
+==================
+* Adds TransportRedis.remove function and updates comments
+
+
 0.2.3 / 2013-10-21
 ==================
 * Adds task retry and example
