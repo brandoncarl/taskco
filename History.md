@@ -1,6 +1,7 @@
 
 0.2.3 / 2013-10-21
 ==================
+* Adds further overloading of Factory.execute
 * Moves task cleanup logic from worker to task
 * Moves team autostart to Factory.addTeam (prevents race conditions)
 
