@@ -1,6 +1,7 @@
 
 0.2.4 / 2013-10-21
 ==================
+* Updates retry example and adds remove example
 * Created Task.remove function
 * Adds TransportRedis.remove function and updates comments
 
