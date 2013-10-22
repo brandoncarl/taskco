@@ -1,6 +1,7 @@
 
 0.2.6 / 2013-10-22
 ==================
+* Switches Broker.acquire to not use promises: promise now handled in Factory.execute
 * Switches Factory.getClient calls to Factory.execute
 
 
