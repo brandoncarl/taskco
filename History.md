@@ -1,4 +1,9 @@
 
+0.2.7 / 2013-10-22
+==================
+* Switches to when 1.8.1 to help resolve process.nextTick errors
+
+
 0.2.6 / 2013-10-22
 ==================
 * Switches Broker.acquire to not use promises: promise now handled in Factory.execute
