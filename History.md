@@ -1,6 +1,7 @@
 
 0.2.7 / 2013-10-22
 ==================
+* Fixes erroneous call to self in Team.heartbeat
 * Factory.getNextId now relies on Factory.execute
 * Switches to when 1.8.1 to help resolve process.nextTick errors
 
