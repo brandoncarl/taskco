@@ -4,7 +4,6 @@
 * Tasks.getStatus no longer relies on Task.get
 * Fixes erroneous call to self in Team.heartbeat
 * Factory.getNextId now relies on Factory.execute
-* Switches to when 1.8.1 to help resolve process.nextTick errors
 
 
 0.2.6 / 2013-10-22

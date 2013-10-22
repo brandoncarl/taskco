@@ -3,7 +3,7 @@
   "version": "0.2.6",
   "description": "Distributed jobs queue for node.js",
   "keywords": [
-    "job√",
+    "job",
     "queue",
     "worker",
     "redis"
@@ -19,7 +19,7 @@
     "lodash-node": "~2.2.1",
     "async": "~0.2.9",
     "generic-pool": "~2.0.4",
-    "when": "https://github.com/brandoncarl/when/tarball/master"
+    "when": "~2.5.1"
   },
   "devDependencies": {
     "mocha": "~1.13.0",
