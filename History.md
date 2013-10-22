@@ -1,4 +1,11 @@
 
+0.2.7 / 2013-10-22
+==================
+* Tasks.getStatus no longer relies on Task.get
+* Fixes erroneous call to self in Team.heartbeat
+* Factory.getNextId now relies on Factory.execute
+
+
 0.2.6 / 2013-10-22
 ==================
 * Switches Broker.acquire to not use promises: promise now handled in Factory.execute
