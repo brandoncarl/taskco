@@ -16,11 +16,11 @@
 
 
 // Local
-var TaskCo = require('../index.js').setup()
+var TaskCo = require('../index.js').setup();
 
 
 console.time('tasks');
-var i = 0; runs = 10;
+var i = 0; runs = 200;
 
 var processEmail = {
 

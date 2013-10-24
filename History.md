@@ -1,4 +1,9 @@
 
+0.2.8 / 2013-10-24
+==================
+* Adds "parsePoolSettings" to Broker to allow additional pool parameters
+
+
 0.2.7 / 2013-10-22
 ==================
 * Tasks.getStatus no longer relies on Task.get

@@ -1,6 +1,6 @@
 {
   "name": "taskco",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Distributed jobs queue for node.js",
   "keywords": [
     "job",
