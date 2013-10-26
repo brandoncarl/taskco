@@ -1,4 +1,9 @@
 
+0.2.9 / 2013-10-26
+==================
+* Attaches error to task upon failure
+
+
 0.2.8 / 2013-10-24
 ==================
 * Adds "parsePoolSettings" to Broker to allow additional pool parameters
