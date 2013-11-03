@@ -59,7 +59,7 @@ Tasks can have a priority of any number. The higher the number, the higher the p
 TaskCo was created with the following features in mind:
 
 1. Extremely modular design: enables easier collaboration.
-2. The ability to drop in a transport. Currently, Redis is the only supported transport.
+2. The ability to drop in a store. Currently, Redis is the only supported store.
 3. Connection pooling.
 4. Task-routing-friendly: while not currently implemented, the infrastructure was design with this in mind.
 5. Easy input/output. Lots of convenience functions.
@@ -87,7 +87,7 @@ These are the top priorities currently:
 
 ### Why another tasks queue for node?
 
-This project started in search of a redis-backed jobs queue. While there are numerous options at the time of publishing,
+This project started in search of a redis-backed tasks queue. While there are numerous options at the time of publishing,
 each of these has its benefits/shortcomings. These are in NO way knocks against the projects, or against the authors, they
 simply highlight why we are in need of another solution.
 
