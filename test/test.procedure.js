@@ -1,4 +1,5 @@
 "use strict";
+
 // ### Procedure test suite
 
 
@@ -9,6 +10,7 @@ describe("Procedure Module", function() {
   before(function(done) {
     flushRedis(done);
   });
+
 
   describe("#constructor", function() {
 
@@ -81,7 +83,7 @@ describe("Procedure Module", function() {
   });
 
 
-  describe("andTeam", function() {
+  describe("#andTeam", function() {
 
     it("adds a team to the factory", function() {
       var name = "email",

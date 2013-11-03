@@ -18,4 +18,4 @@ global.flushRedis = function(done) { redisClient.flushall(done); };
 global.TaskCo  = require('../../index.js').setup(),
 global.Factory = require('../../lib/factory.js');
 global.Procedure = require('../../lib/procedure.js');
-
+global.Team = require('../../lib/team.js');
