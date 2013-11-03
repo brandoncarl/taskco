@@ -4,7 +4,8 @@ TaskCo
 
 Distributed priority jobs queue for node.js
 
-**Note**: this repository is still highly in flux. It is not currently recommended for use in production.
+**Note**: this repository is still in early development. My company is preparing to use it in production. While the
+core API is in place, we are looking for initial users and contributors.
 
 ## Introduction
 
