@@ -7,7 +7,52 @@ Distributed priority jobs queue for node.js
 **Note**: this repository is still in early development. My company is preparing to use it in production. While the
 core API is in place, we are looking for initial users and contributors.
 
-## Introduction
+## Installation
+
+```
+npm install taskco
+```
+
+## Getting Started
+
+```javascript
+// Begin by creating a factory:
+var TaskCo = require('taskco').setup();
+
+// Add team to process tasks named "email" using the processEmail function
+// This team has 3 concurrent workers removes tasks 5 seconds after completion/failure.
+TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
+
+// Create task : if uid is set, it will, in conjuction with the type of task (email)
+// enforce uniqueness of that task.
+TaskCo.quickEntry('email', { name : 'hello@gmail.com', uid : 'uniqueid' });
+
+```
+
+**Note**: While a TaskCo supports multiple factories, the root object has convenience accessors for the default factory. The
+following example uses those methods.
+
+
+## Procedures
+
+A procedure consists of at least one function, `work`.
+
+```javascript
+var processEmail = {
+  work: function(task, done) {
+    console.log(task.data.name);
+    done();
+  }
+}
+
+```
+
+### Priorities
+
+Jobs can have a priority of any number. The higher the number, the higher the priority. Default priority levels include "low", "normal", "medium", "high", and "critical". Please see examples/priority.js for usage.
+
+
+## Description
 
 ### TaskCo Goals
 
@@ -36,46 +81,6 @@ These are the top priorities currently:
 2. Better error handling (promises consume a lot of errors...should consider emitting them).
 3. More tests! I'd like to get a great test suite in place to facilitate pull requests.
 4. Separate http server: I prefer to separate this into an additional repo.
-
-
-## Getting Started
-
-### The quick way
-
-While a TaskCo supports multiple factories, the root object has convenience accessors for the default factory. The
-following example uses those methods.
-
-```javascript
-
-// ***** Process #1 (web client)
-var TaskCo = require('taskco').setup();
-
-// Create task : if uid is set, it will, in conjuction with the type of task (email)
-// enforce uniqueness of that task.
-TaskCo.quickEntry('email', { name : 'hello@gmail.com', uid : 'uniqueid' });
-
-
-
-// **** Process #2 (worker)
-var TaskCo = require('taskco').setup();
-
-// A procedure must have a work function
-var processEmail = {
-  work: function(task, done) {
-    console.log(task.data.name);
-    done();
-  }
-}
-
-// Add the team with concurrency of 3 workers and remove the job 5 seconds after completion/failure.
-TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
-
-```
-
-
-### Priorities
-
-Jobs can have a priority of any number. The higher the number, the higher the priority. Default priority levels include "low", "normal", "medium", "high", and "critical". Please see examples/priority.js for usage.
 
 
 ## Addendum
