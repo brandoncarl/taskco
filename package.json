@@ -1,9 +1,10 @@
 {
   "name": "taskco",
   "version": "0.2.10",
-  "description": "Distributed jobs queue for node.js",
+  "description": "Distributed task queue for node.js",
   "keywords": [
     "job",
+    "task",
     "queue",
     "worker",
     "redis"

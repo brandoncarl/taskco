@@ -1,5 +1,5 @@
 
-// Demonstrates a job with "retry" (maxAttempts)
+// Demonstrates a task with "retry" (maxAttempts)
 
 var TaskCo = require('../index.js').setup(),
     i = 0;
@@ -12,7 +12,7 @@ var processEmail = {
     task.on('success', function() { console.log("Completed task!", task.id) });
     task.on('retry', function() { console.log("Retrying"); });
     setTimeout(function() {
-      (++i == 3) ? done() :done(new Error("Bad job, yo!"));
+      (++i == 3) ? done() :done(new Error("Bad task, yo!"));
     }, 50);
   },
 

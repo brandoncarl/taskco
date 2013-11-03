@@ -1,4 +1,11 @@
 
+0.2.11 / 2013-11-04
+===================
+* Replaces "job" references with "task" for consistency
+* Adds Team tests
+* Adds Procedures tests
+
+
 0.2.10 / 2013-11-03
 ===================
 * Factory: throws error when adding team w/insufficient connections

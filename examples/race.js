@@ -18,7 +18,7 @@
 // Local
 var TaskCo = require('../index.js').setup();
 
-// THIS EXAMPLE CREATES A LOCKING CONDITION AT JOB 599;
+// THIS EXAMPLE CREATES A LOCKING CONDITION AT TASK 599;
 console.time('tasks');
 var i = 0; runs = 1000;
 
