@@ -1,4 +1,4 @@
-
+"use strict";
 // ### Procedure test suite
 
 
@@ -20,7 +20,7 @@ describe("Procedure Module", function() {
               done();
             }
           };
-      procedure = new Procedure(vars.factory, name, template);
+      var procedure = new Procedure(vars.factory, name, template);
       expect(procedure.name).to.equal(name);
       expect(procedure.factory).to.equal(vars.factory);
       expect(procedure.prefix).to.equal(vars.factory.prefix);
@@ -39,7 +39,7 @@ describe("Procedure Module", function() {
           },
           totalCopiedHandlers = 0;
       var procedure = new Procedure(vars.factory, name, template);
-      for (key in procedure.handlers) {
+      for (var key in procedure.handlers) {
           if (procedure.handlers.hasOwnProperty(key)) {
             totalCopiedHandlers++;
           }
@@ -65,12 +65,14 @@ describe("Procedure Module", function() {
           reserved = ['prefix', 'name', 'defaults', 'on'],
           work = function(task, done) {
             done();
-          }
+          },
+          keyword,
+          template;
       for(var i=0; i<reserved.length; i++) {
-        key = reserved[i];
+        keyword = reserved[i];
         template = {};
         template.work = work;
-        template[key] = 'Ups…';
+        template[keyword] = 'Ups…';
         badFxn = function() { new Procedure(vars.factory, name, template); };
         expect(badFxn).to.throw(Error);
       }
