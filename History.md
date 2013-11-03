@@ -1,41 +1,47 @@
 
+0.2.10 / 2013-11-03
+===================
+* Factory: throws error when adding team w/insufficient connections
+* Increases defaults connections to { min : 3, max : 10 }
+
+
 0.2.9 / 2013-10-26
-==================
+===================
 * Attaches error to task upon failure
 
 
 0.2.8 / 2013-10-24
-==================
+===================
 * Adds "parsePoolSettings" to Broker to allow additional pool parameters
 
 
 0.2.7 / 2013-10-22
-==================
+===================
 * Tasks.getStatus no longer relies on Task.get
 * Fixes erroneous call to self in Team.heartbeat
 * Factory.getNextId now relies on Factory.execute
 
 
 0.2.6 / 2013-10-22
-==================
+===================
 * Switches Broker.acquire to not use promises: promise now handled in Factory.execute
 * Switches Factory.getClient calls to Factory.execute
 
 
 0.2.5 / 2013-10-21
-==================
+===================
 * Hot fix of incorrect client usage in Monitor
 
 
 0.2.4 / 2013-10-21
-==================
+===================
 * Updates retry example and adds remove example
 * Created Task.remove function
 * Adds TransportRedis.remove function and updates comments
 
 
 0.2.3 / 2013-10-21
-==================
+===================
 * Adds task retry and example
 * Wraps Task.finalize function in order to prep for failure retries
 * Bug fix in Dispatcher (ignore instead of ignoreTask)
@@ -45,7 +51,7 @@
 
 
 0.2.2 / 2013-10-18
-==================
+===================
 * Changed Dispatcher#broadcast(id, event) to (event, id)
 * Binds appropriate Dispatcher functions in-module rather than out-of-module
 * Switches sortedAdd/sortedPop order in order to fix LIFO problem
@@ -57,13 +63,13 @@
 
 
 0.2.1 / 2013-10-18
-==================
+===================
 * Adds "priority" feature and updates Readme
 * Fixed another "subcriber" typo in Dispatcher.constructor
 
 
 0.2.0 / 2013-10-18
-==================
+===================
 MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
 * Renamed "finish" event to "end"
 * Procedure.andTeam now returns the team created
@@ -79,12 +85,12 @@ MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
 
 
 0.1.3 / 2013-10-17
-==================
+===================
 * Adds local vs global binding abilities
 
 
 0.1.2 / 2013-10-17
-==================
+===================
 * Renamed complete event to success
 * Fixes problem where expiration didn't work across processes
 * Bug fixes in dispatcher
@@ -92,7 +98,7 @@ MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
 
 
 0.1.1 / 2013-10-16
-==================
+===================
 * Adds task on/broadcast functionality
 * Added publish to transport-redis
 * Added master/slave example
@@ -103,7 +109,7 @@ MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
 
 
 0.1.0 / 2013-10-15
-==================
+===================
  * Fixes auth connection string problem with transport-redis
  * Refactors dispatcher and fixes memory leak in getNextJob
  * Cleans up console.log and whitespace
@@ -120,34 +126,34 @@ MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
 
 
 0.0.5 / 2013-10-12
-==================
+===================
 * Fixes serialization in hashSet
 * Fixes typos in Task.progress
 
 
 0.0.4 / 2013-10-12
-==================
+===================
 * Adds error handling to Factory.quickEntry
 * Removes required procedure for task creation
 * Adds auto-serialization to TransportRedis
 
 
 0.0.3 / 2013-10-12
-==================
+===================
  * Adds string parsing to transport-redis
  * Procedure has "andTeam" chaining
  * lacksTask now rejects with id vs error
 
 
 0.0.2 / 2013-10-12
-==================
+===================
  * Provides small redis url example and improves transport-redis arguments
  * Improves broker auth race condition (hard to circumvent)
  * Extracts out Transport layer functions (to allow different Transports)
 
 
 0.0.1 / 2013-10-11
-========================
+===================
  * Removes callback from Factory.reserveTaskId
  * Updates example for new form of quickEntry
  * Ensures that progress maxes out at 100
