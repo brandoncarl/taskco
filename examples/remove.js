@@ -1,5 +1,5 @@
 
-// Demonstrates a job with manual remove
+// Demonstrates a task with manual remove
 
 var TaskCo = require('../index.js').setup(),
     i = 0;

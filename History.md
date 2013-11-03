@@ -1,4 +1,12 @@
 
+0.2.11 / 2013-11-04
+===================
+* Replaces "transport" language with "store" for appropriateness
+* Replaces "job" references with "task" for consistency
+* Adds Team tests
+* Adds Procedures tests
+
+
 0.2.10 / 2013-11-03
 ===================
 * Factory: throws error when adding team w/insufficient connections
@@ -37,7 +45,7 @@
 ===================
 * Updates retry example and adds remove example
 * Created Task.remove function
-* Adds TransportRedis.remove function and updates comments
+* Adds StoreRedis.remove function and updates comments
 
 
 0.2.3 / 2013-10-21
@@ -59,7 +67,7 @@
 * Cleans up remaining noop and done calls/declarations
 * Adds extensive argument polymorphism: many fxn can accept client + factory
 * Eliminates calls to "run" and Factory.run (was causing binding problems)
-* Binds transport-redis functions to self
+* Binds store-redis functions to self
 
 
 0.2.1 / 2013-10-18
@@ -100,18 +108,18 @@ MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
 0.1.1 / 2013-10-16
 ===================
 * Adds task on/broadcast functionality
-* Added publish to transport-redis
+* Added publish to store-redis
 * Added master/slave example
 * Changes pubSub language to "sub" (publish clients are separate)
 * Adds basic dispatch functions
-* Allows for errors in transport-redis.createConnection
+* Allows for errors in store-redis.createConnection
 * Adds pubSub to Broker, cleans up legacy code
 
 
 0.1.0 / 2013-10-15
 ===================
- * Fixes auth connection string problem with transport-redis
- * Refactors dispatcher and fixes memory leak in getNextJob
+ * Fixes auth connection string problem with store-redis
+ * Refactors dispatcher and fixes memory leak in getNextTask
  * Cleans up console.log and whitespace
  * Switches Manager to Dispatcher (more appropriate name), binds delegate function
  * Initial refactoring of team/worker
@@ -135,21 +143,21 @@ MAJOR RENAMING: GOAL IS INTUITIVE, CONSISTENT FUNCTION NAMES
 ===================
 * Adds error handling to Factory.quickEntry
 * Removes required procedure for task creation
-* Adds auto-serialization to TransportRedis
+* Adds auto-serialization to StoreRedis
 
 
 0.0.3 / 2013-10-12
 ===================
- * Adds string parsing to transport-redis
+ * Adds string parsing to store-redis
  * Procedure has "andTeam" chaining
  * lacksTask now rejects with id vs error
 
 
 0.0.2 / 2013-10-12
 ===================
- * Provides small redis url example and improves transport-redis arguments
+ * Provides small redis url example and improves store-redis arguments
  * Improves broker auth race condition (hard to circumvent)
- * Extracts out Transport layer functions (to allow different Transports)
+ * Extracts out Store layer functions (to allow different Stores)
 
 
 0.0.1 / 2013-10-11
