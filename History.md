@@ -1,6 +1,7 @@
 
 0.2.10 / 2013-11-03
 ===================
+* Factory: throws error when adding team w/insufficient connections
 * Increases defaults connections to { min : 3, max : 10 }
 
 
