@@ -5,6 +5,7 @@
 * Add Broker.shutdown and Broker.destroyChannel
 * Add Company.shutdown and Factory.shutdown
 
+
 0.2.11 / 2013-11-04
 ===================
 * Replaces "transport" language with "store" for appropriateness
