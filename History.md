@@ -1,6 +1,7 @@
 
 0.3.0 / 2013-11-18
 ===================
+* Add Lua script for tidying post-crash
 * All shutdown commands now return promises
 * Factory.shutdown: fix bad call to team.off()
 * Team.shutdown: fix undeclared done function, add priority to purgatory
