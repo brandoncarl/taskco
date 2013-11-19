@@ -2,7 +2,8 @@ TaskCo
 ======
 ![](https://www.codeship.io/projects/6ed66fe0-17fe-0131-e0ed-0ef248b6a1b0/status)
 
-Distributed priority task queue for node.js
+Distributed priority task queue for node.js with connection-pooling and the ability to enforce uniqueness
+constraints.
 
 **Note**: this repository is still in early development. My company is using it in production. While the
 core API is in place, we are looking for initial users and contributors.
@@ -28,7 +29,6 @@ TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
 // Create task : if uid is set, it will, in conjuction with the type of task (email)
 // enforce uniqueness of that task.
 TaskCo.quickEntry('email', { name : 'hello@gmail.com', uid : 'uniqueid' });
-
 ```
 
 **Note**: While a TaskCo supports multiple factories, the root object has convenience accessors for the default factory. The
@@ -46,7 +46,6 @@ var processEmail = {
     done();
   }
 }
-
 ```
 
 ### Priorities
@@ -76,8 +75,18 @@ TaskCo proceeds with the following sequential steps:
 7. New or sibling processes parse through purgatory to find tasks w/action needed.
 
 
+## Where you can help:
 
-## Description
+These are the top priorities currently:
+
+1. Optional logging (to be used for error handling) - this is the first step toward the "monitor".
+2. Better error handling (promises consume a lot of errors...should consider emitting them).
+3. More tests! I'd like to get a great test suite in place to facilitate pull requests.
+4. Separate http server: I prefer to separate this into an additional repo.
+
+
+## Addendum
+
 
 ### TaskCo Goals
 
@@ -92,23 +101,6 @@ TaskCo was created with the following features in mind:
 7. The ability to enforce task uniqueness.
 8. An extensive test suite (help needed here)
 
-
-### Eventual roadmap:
-
-![](resources/TaskCo.jpg)
-
-
-## Where you can help:
-
-These are the top priorities currently:
-
-1. Optional logging (to be used for error handling) - this is the first step toward the "monitor".
-2. Better error handling (promises consume a lot of errors...should consider emitting them).
-3. More tests! I'd like to get a great test suite in place to facilitate pull requests.
-4. Separate http server: I prefer to separate this into an additional repo.
-
-
-## Addendum
 
 ### Why another tasks queue for node?
 
