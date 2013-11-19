@@ -1,6 +1,7 @@
 
 0.3.0 / 2013-11-18
 ===================
+* Change sortedPop to return all information (breaks Dispatcher)
 * Add graceful shutdown and license to Readme
 * Add Team.shutdown function
 * Add timeToDie to Company.shutdown, Factory.shutdown and Team.shutdown
