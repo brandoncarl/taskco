@@ -1,6 +1,7 @@
 
 0.3.0 / 2013-11-18
 ===================
+* All shutdown commands now return promises
 * Factory.shutdown: fix bad call to team.off()
 * Team.shutdown: fix undeclared done function, add priority to purgatory
 * Add Dispatcher functions: halt, shutdown, requeueTask and states: halted, terminated
