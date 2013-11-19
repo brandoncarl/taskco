@@ -1,6 +1,7 @@
 
 0.3.0 / 2013-11-18
 ===================
+* Add Team.shutdown function
 * Add timeToDie to Company.shutdown, Factory.shutdown and Team.shutdown
 * Separate sortedAdd from priorityAdd to stay true to Redis
 * Add better description to Task process
