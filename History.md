@@ -1,8 +1,8 @@
 
 0.3.0 / 2013-11-18
 ===================
+* Add additional Redis commands: hasScript, loadScript, evalSHA
 * Rename timeToDie timeToLive
-* Add Scripts module and load scripts into factory
 * Add Lua script for tidying post-crash
 * All shutdown commands now return promises
 * Factory.shutdown: fix bad call to team.off()
