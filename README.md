@@ -61,18 +61,19 @@ cleanup.
 
 ```javascript
 process.on("SIGTERM", function() {
+  // !!! NOTE THAT TIME TO LIVE MUST BE GREATER THAN 2 SECONDS (DURATION OF BLOCK POP)
   TaskCo.shutdown(10);
 });
 ```
 
-TaskCo proceeds with the following sequential steps:  
-1. Affected Factories are told to commence shutdown process.  
-2. Dispatcher halts retrieving next tasks.  
-3. Teams are told to commence shutdown process.  
-4. Teams log active tasks into `purgatory`, along with timestamps.  
-5. Dispatcher shuts down and broadcasts termination.  
-6. Pooled connections are shut down.  
-7. New or sibling processes parse through purgatory to find tasks w/action needed.  
+TaskCo proceeds with the following sequential steps:
+1. Affected Factories are told to commence shutdown process.
+2. Dispatcher halts retrieving next tasks.
+3. Teams are told to commence shutdown process.
+4. Teams log active tasks into `purgatory`, along with timestamps.
+5. Dispatcher shuts down and broadcasts termination.
+6. Pooled connections are shut down.
+7. New or sibling processes parse through purgatory to find tasks w/action needed.
 
 
 ## Where you can help:
@@ -92,14 +93,14 @@ These are the top priorities currently:
 
 TaskCo was created with the following features in mind:
 
-1. Extremely modular design: enables easier collaboration.  
-2. The ability to drop in a store. Currently, Redis is the only supported store.  
-3. Connection pooling.  
-4. Task-routing-friendly: while not currently implemented, the infrastructure was design with this in mind.  
-5. Easy input/output. Lots of convenience functions.  
-6. As much auto-cleanup as possible (frequent use of `expires`)  
-7. The ability to enforce task uniqueness.  
-8. An extensive test suite (help needed here)  
+1. Extremely modular design: enables easier collaboration.
+2. The ability to drop in a store. Currently, Redis is the only supported store.
+3. Connection pooling.
+4. Task-routing-friendly: while not currently implemented, the infrastructure was design with this in mind.
+5. Easy input/output. Lots of convenience functions.
+6. As much auto-cleanup as possible (frequent use of `expires`)
+7. The ability to enforce task uniqueness.
+8. An extensive test suite (help needed here)
 
 
 ### Why another tasks queue for node?
