@@ -14,10 +14,11 @@ var processEmail = {
     });
 
     // Longer timeout to cause stuck tasks
-    setTimeout(done, 5000);
+    setTimeout(done, 4500);
   }
 };
 
+TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
 
 // Create tasks and then shut down the process in the middle
 // of procesing them
@@ -31,9 +32,12 @@ setTimeout(function() {
   setTimeout(function() {
     console.log(pre + "SHUT DOWN COMMENCING".bold.red)
     TaskCo.shutdown(5).ensure(function() {
-      console.log(pre + "SHUT DOWN COMPLETED".red)
+      console.log(pre + "SHUT DOWN GRACEFULLY".red)
     });
 
-    setTimeout(function() { process.exit() }, 5000);
-  }, 200);
+    setTimeout(function() {
+      console.log(pre + "FORCEFUL SHUTDOWN".red)
+      process.exit()
+    }, 3000);
+  }, 5000);
 }, 500);

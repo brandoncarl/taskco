@@ -3,6 +3,7 @@
 ===================
 * Dispatcher: fix promise-related bug in halt
 * Readme: reflects fact that time-to-live must be greater than 2 seconds
+* Examples: better shutdown example
 
 
 0.3.0 / 2013-11-19
