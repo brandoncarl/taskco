@@ -1,5 +1,10 @@
 
-0.3.0 / 2013-11-18
+0.3.1 / 2013-11-19
+===================
+* Dispatcher: fix promise-related bug in halt
+
+
+0.3.0 / 2013-11-19
 ===================
 * Cleans up examples directory
 * Add examples/shutdown
