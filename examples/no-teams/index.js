@@ -1,8 +1,8 @@
 
 // Example demonstrating errors thrown when too many teams are added
-// relative to the number of available connections.
+// relative to the number of available connections. Should throw an error.
 
-var TaskCo = require('../index.js').setup(null, { max : 3 });
+var TaskCo = require('../../').setup(null, { max : 3 });
 
 var procedure = {
   work: function(task, done) { console.log("Working..."); done(); }

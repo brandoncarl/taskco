@@ -1,14 +1,14 @@
 
 // Demonstrates a task with "retry" (maxAttempts)
 
-var TaskCo = require('../index.js').setup(),
+var TaskCo = require('../../').setup(),
     i = 0;
 
 var processEmail = {
 
   // Fake function to simulate work
   work: function(task, done) {
-    console.log("WORKING");
+    console.log("Attempt #" + i);
     task.on('success', function() { console.log("Completed task!", task.id) });
     task.on('retry', function() { console.log("Retrying"); });
     setTimeout(function() {

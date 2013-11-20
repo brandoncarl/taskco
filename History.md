@@ -1,4 +1,28 @@
 
+0.3.0 / 2013-11-18
+===================
+* Cleans up examples directory
+* Add examples/shutdown
+* Add Dispatcher.tidy with call on start and "terminating" event
+* Fix bug where subscriber wasn't listening at start
+* Add Scripts module and load scripts into factory
+* Add additional Redis commands: hasScript, loadScript, evalSHA
+* Rename timeToDie timeToLive
+* Add Lua script for tidying post-crash
+* All shutdown commands now return promises
+* Factory.shutdown: fix bad call to team.off()
+* Team.shutdown: fix undeclared done function, add priority to purgatory
+* Add Dispatcher functions: halt, shutdown, requeueTask and states: halted, terminated
+* Change sortedPop to return all information (breaks Dispatcher)
+* Add graceful shutdown and license to Readme
+* Add Team.shutdown function
+* Add timeToDie to Company.shutdown, Factory.shutdown and Team.shutdown
+* Separate sortedAdd from priorityAdd to stay true to Redis
+* Add better description to Task process
+* Add Broker.shutdown and Broker.destroyChannel
+* Add Company.shutdown and Factory.shutdown
+
+
 0.2.11 / 2013-11-04
 ===================
 * Replaces "transport" language with "store" for appropriateness
