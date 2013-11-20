@@ -1,6 +1,7 @@
 
 0.3.0 / 2013-11-18
 ===================
+* Cleans up examples directory
 * Add examples/shutdown
 * Add Dispatcher.tidy with call on start and "terminating" event
 * Fix bug where subscriber wasn't listening at start

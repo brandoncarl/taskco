@@ -1,16 +1,23 @@
 
 // Process #2 (child)
-var TaskCo = require('../').setup();
+var colors = require('colors'),
+    TaskCo = require('../../').setup(),
+    pre = "#2 ".cyan;
 
 
 // A procedure must have a work function
 var processEmail = {
+
+  alert: function(msg) {
+    console.log(pre + "ALERT", msg);
+  },
+
   success: function() {
-    console.log("We did it!")
+    console.log(pre + "We did it!")
   },
 
   work: function(task, done) {
-    console.log(task.data.name);
+    console.log(pre + task.data.name);
     task.broadcast('alert', "Hi there you!");
     done();
   }

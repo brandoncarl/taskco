@@ -1,22 +1,8 @@
 
-// Using URL
-// var config,
-//     url = require('url'),
-//     redisURL = "redis://rediscloud:...";
-//     redisURL = url.parse(redisURL);
-
-// config = {
-//   hostname : redisURL.hostname,
-//   port     : redisURL.port,
-//   options  : { no_ready_check : true }
-// };
-
-// var redisURL = "redis://rediscloud:...";
-// var TaskCo = require('../index.js').setup(redisURL);
-
+// Example that creates a locking condition - appears to be solved
 
 // Local
-var TaskCo = require('../index.js').setup();
+var TaskCo = require('../../').setup();
 
 // THIS EXAMPLE CREATES A LOCKING CONDITION AT TASK 599;
 console.time('tasks');

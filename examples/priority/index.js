@@ -1,7 +1,7 @@
 
 // Example demonstrating how to use priorities
 
-var TaskCo = require('../index.js').setup();
+var TaskCo = require('../../').setup();
 
 
 var processEmail = {

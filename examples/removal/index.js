@@ -1,7 +1,7 @@
 
 // Demonstrates a task with manual remove
 
-var TaskCo = require('../index.js').setup(),
+var TaskCo = require('../../').setup(),
     i = 0;
 
 var processEmail = {
