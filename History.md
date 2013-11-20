@@ -1,6 +1,7 @@
 
 0.3.0 / 2013-11-18
 ===================
+* Fix bug where subscriber wasn't listening at start
 * Add Scripts module and load scripts into factory
 * Add additional Redis commands: hasScript, loadScript, evalSHA
 * Rename timeToDie timeToLive
