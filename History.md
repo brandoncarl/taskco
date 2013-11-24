@@ -1,4 +1,9 @@
 
+0.3.2 / 2013-11-24
+===================
+* Dependencies: removes "async"
+
+
 0.3.1 / 2013-11-19
 ===================
 * Dispatcher: fix promise-related bug in halt
