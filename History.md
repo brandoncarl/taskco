@@ -1,6 +1,7 @@
 
 0.3.2 / 2013-11-24
 ===================
+* Monitor: moves {find, findId, findExists} to Tasks
 * Dependencies: removes "async"
 
 
