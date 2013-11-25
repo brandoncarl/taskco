@@ -66,14 +66,14 @@ process.on("SIGTERM", function() {
 });
 ```
 
-TaskCo proceeds with the following sequential steps:
-1. Affected Factories are told to commence shutdown process.
-2. Dispatcher halts retrieving next tasks.
-3. Teams are told to commence shutdown process.
-4. Teams log active tasks into `purgatory`, along with timestamps.
-5. Dispatcher shuts down and broadcasts termination.
-6. Pooled connections are shut down.
-7. New or sibling processes parse through purgatory to find tasks w/action needed.
+TaskCo proceeds with the following sequential steps:  
+1. Affected Factories are told to commence shutdown process.  
+2. Dispatcher halts retrieving next tasks.  
+3. Teams are told to commence shutdown process.  
+4. Teams log active tasks into `purgatory`, along with timestamps.  
+5. Dispatcher shuts down and broadcasts termination.  
+6. Pooled connections are shut down.  
+7. New or sibling processes parse through purgatory to find tasks w/action needed.  
 
 
 ## Where you can help:
