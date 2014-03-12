@@ -1,6 +1,11 @@
 
-0.3.2 / 2013-11-24
+
+0.3.2 / 2014-03-11
 ===================
+* Factory: fixes rids of race conditions in quickEntry
+* Tasks: adds ability to pass existing id (via options.id) to create
+* Factory: adds ability to use existing client to getNextId
+* Task: adds ability to use existing client to save
 * Monitor: moves {find, findId, findExists} to Tasks
 * Dependencies: removes "async"
 
