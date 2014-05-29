@@ -1,5 +1,10 @@
 
 
+0.3.3 / 2014-05-29
+===================
+* Company#addFactory: uses "def" namespace when name is undefined
+
+
 0.3.2 / 2014-03-11
 ===================
 * Factory: fixes rids of race conditions in quickEntry
