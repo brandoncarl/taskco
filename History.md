@@ -1,6 +1,7 @@
 
 0.3.4 / 2014-07/08
 ===================
+* Worker#work: makes when.js 3.3.0 compatible
 * Mocha: better error debugging
 * Build: upgrades when.js to 3.3.0
 
