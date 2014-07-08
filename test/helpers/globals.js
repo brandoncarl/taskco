@@ -1,4 +1,7 @@
 
+// Increase stack trace limit
+Error.stackTraceLimit = 30;
+require('when/monitor/console');
 
 // Chai test suite
 global.chai = require('chai');
