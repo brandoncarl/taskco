@@ -1,5 +1,9 @@
 
-0.3.4 / 2014-07/08
+0.3.5 / 2014-10-14
+===================
+* Task#save: returns error rather than id for conflicting task
+
+0.3.4 / 2014-07-08
 ===================
 * Worker#work: makes when.js 3.3.0 compatible
 * Mocha: better error debugging
