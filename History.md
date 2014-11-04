@@ -1,4 +1,8 @@
 
+0.3.6 / 2014-11-04
+===================
+* Store-Redis#constructor: handles no password URLs
+
 0.3.5 / 2014-10-14
 ===================
 * Task#save: returns error rather than id for conflicting task
