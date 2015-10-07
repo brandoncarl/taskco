@@ -25,7 +25,7 @@ var TaskCo = require('taskco').setup();
 // This team has 3 concurrent workers removes tasks 5 seconds after completion/failure.
 TaskCo.addProcedure('email', processEmail, { removeAfter : 5 }).andTeam(3);
 
-// Create task : if uid is set, it will, in conjuction with the type of task (email)
+// Create task : if uid is set, it will, in conjunction with the type of task (email)
 // enforce uniqueness of that task.
 TaskCo.quickEntry('email', { name : 'hello@gmail.com', uid : 'uniqueid' });
 ```
